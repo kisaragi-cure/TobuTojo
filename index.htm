@@ -1346,6 +1346,22 @@ case ( '"odpt.Station:Tobu.Tojo.Asakadai"' ):
 		} 
         break ;
 
+	case ( '"odpt.Station:Tobu.Tojo.Shiki"' ):
+		if ( unban.substr ( -1,1) == 'S' ||  unban.substr ( -1,1) == 'T' ||  unban.substr ( -1,1) == 'K'  || kind == '普' ){
+		nameText = document.getElementById('tju13-14');
+		target = document.getElementById('tju13-14d');
+		doc2= document.getElementById("tju13-14e"); 
+		doc0= document.getElementById("tju13-14b");  
+		doc1= document.getElementById("tju13-14c"); 
+		} else {
+		nameText = document.getElementById('tj13-14');
+		target = document.getElementById('tj13-14d');
+		doc2= document.getElementById("tj13-14e"); 
+		doc0= document.getElementById("tj13-14b");  
+		doc1= document.getElementById("tj13-14c"); 
+		} 
+        break ;
+
 
 	default:
 	nameText = 0;
