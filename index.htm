@@ -318,6 +318,13 @@ background-color: #ffffff;
 <div id="tj11-3b" style="position: absolute; top: 3120px; left:435px; font-size:12pt; "></div>
 <div id="tj11-3" style="position: absolute; top: 3120px; left:445px; font-size:12pt; "></div>
 <div id="tj11-3c" style="position: absolute; top: 3175px; left:435px; font-size:12pt; color:#FF0000; "></div>
+
+
+<div id="tj11-Mad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj11-Ma" disabled / name="address" size="14" value=""　></div>
+<div id="tj11-Mb" style="position: absolute; top: 2990px; left:455px; font-size:12pt; "></div>
+<div id="tj11-M" style="position: absolute; top: 2990px; left:465px; font-size:12pt; "></div>
+<div id="tj11-Mc" style="position: absolute; top: 3045px; left:455px; font-size:12pt; color:#FF0000; "></div>
+
 <div id="tj11-4ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj11-4a" disabled / name="address" size="14" value=""　></div>
 <div id="tj11-4b" style="position: absolute; top: 2990px; left:375px; font-size:12pt; "></div>
 <div id="tj11-4" style="position: absolute; top: 2990px; left:385px; font-size:12pt; "></div>
@@ -495,6 +502,7 @@ var data = JSON.parse(request.responseText.replaceAll("odpt:","odpt"));
       let n1 = 0;
       let p = 5;
       let p1 = 250;
+      let wakoshi = '';
 
 
 let now = Math.floor(Date.now() / 60000) ;
@@ -976,10 +984,18 @@ case ( '"odpt.Station:Tobu.Tojo.KamiItabashi"' ):
 		doc1= document.getElementById("tj07-1c"); 
 	} else {
 		nameText = document.getElementById('tj07-2a');
+	  if ( nameText.value == "" ) {
 		target = document.getElementById('tj07-2ad');
 		doc2= document.getElementById("tj07-2"); 
 		doc0= document.getElementById("tj07-2b");  
 		doc1= document.getElementById("tj07-2c"); 
+	  } else {
+		nameText = document.getElementById('tj07-1a');
+		target = document.getElementById('tj07-1ad');
+		doc2= document.getElementById("tj07-1"); 
+		doc0= document.getElementById("tj07-1b");  
+		doc1= document.getElementById("tj07-1c"); 
+	  }
 	}
 	} else {
 	if ( kind == '普'){
@@ -990,10 +1006,18 @@ case ( '"odpt.Station:Tobu.Tojo.KamiItabashi"' ):
 		doc1= document.getElementById("tj07-3c"); 
 	} else {
 		nameText = document.getElementById('tj07-4a');
+	  if ( nameText.value == "" ) {
 		target = document.getElementById('tj07-4ad');
 		doc2= document.getElementById("tj07-4"); 
 		doc0= document.getElementById("tj07-4b");  
 		doc1= document.getElementById("tj07-4c"); 
+	  } else {
+		nameText = document.getElementById('tj07-3a');
+		target = document.getElementById('tj07-3ad');
+		doc2= document.getElementById("tj07-3"); 
+		doc0= document.getElementById("tj07-3b");  
+		doc1= document.getElementById("tj07-3c"); 
+	  }
 	}
 	}
         break ;
@@ -1114,10 +1138,18 @@ case ( '"odpt.Station:Tobu.Tojo.Narimasu"' ):
 		doc1= document.getElementById("tj10-1c"); 
 		} else {
 		nameText = document.getElementById('tj10-2a');
+	  if ( nameText.value == "" ) {
 		target = document.getElementById('tj10-2ad');
 		doc2= document.getElementById("tj10-2"); 
 		doc0= document.getElementById("tj10-2b");  
 		doc1= document.getElementById("tj10-2c"); 
+	  } else {
+		nameText = document.getElementById('tj10-1a');
+		target = document.getElementById('tj10-1ad');
+		doc2= document.getElementById("tj10-1"); 
+		doc0= document.getElementById("tj10-1b");  
+		doc1= document.getElementById("tj10-1c"); 
+	  }
 		}
 	} else {
 		if ( unban.substr ( 1,1) == '7' ||  unban.substr ( 1,1) == '8'  ){
@@ -1128,10 +1160,18 @@ case ( '"odpt.Station:Tobu.Tojo.Narimasu"' ):
 		doc1= document.getElementById("tj10-3c"); 
 		} else {
 		nameText = document.getElementById('tj10-4a');
+	  if ( nameText.value == "" ) {
 		target = document.getElementById('tj10-4ad');
 		doc2= document.getElementById("tj10-4"); 
 		doc0= document.getElementById("tj10-4b");  
 		doc1= document.getElementById("tj10-4c"); 
+	  } else {
+		nameText = document.getElementById('tj10-3a');
+		target = document.getElementById('tj10-3ad');
+		doc2= document.getElementById("tj10-3"); 
+		doc0= document.getElementById("tj10-3b");  
+		doc1= document.getElementById("tj10-3c"); 
+	  }
 		}
 	}
         break ;
@@ -1183,6 +1223,7 @@ case ( '"odpt.Station:Tobu.Tojo.Wakoshi"' ):
 		doc2= document.getElementById("tj11-3"); 
 		doc0= document.getElementById("tj11-3b");  
 		doc1= document.getElementById("tj11-3c"); 
+		wakoshi =   '　' + '&nbsp;' + des + '<br/>' +  '　' + unban.substr ( -3,3) +　 '<br/>' +  '<br/>' +  '　　' ;
 		} else {
 		nameText = document.getElementById('tj11-4a');
 		target = document.getElementById('tj11-4ad');
@@ -1382,10 +1423,18 @@ case ( '"odpt.Station:Tobu.Tojo.Shiki"' ):
 		doc1= document.getElementById("tj14-2c"); 
 		} else {
 		nameText = document.getElementById('tj14-1a');
+	  if ( nameText.value == "" ) {
 		target = document.getElementById('tj14-1ad');
 		doc2= document.getElementById("tj14-1"); 
 		doc0= document.getElementById("tj14-1b");  
 		doc1= document.getElementById("tj14-1c"); 
+	  } else {
+		nameText = document.getElementById('tj14-2a');
+		target = document.getElementById('tj14-2ad');
+		doc2= document.getElementById("tj14-2"); 
+		doc0= document.getElementById("tj14-2b");  
+		doc1= document.getElementById("tj14-2c"); 
+	  }
 		}
 	} else {
 		if ( kind == '普' ){
@@ -1396,10 +1445,18 @@ case ( '"odpt.Station:Tobu.Tojo.Shiki"' ):
 		doc1= document.getElementById("tj14-3c"); 
 		} else {
 		nameText = document.getElementById('tj14-4a');
+	  if ( nameText.value == "" ) {
 		target = document.getElementById('tj14-4ad');
 		doc2= document.getElementById("tj14-4"); 
 		doc0= document.getElementById("tj14-4b");  
 		doc1= document.getElementById("tj14-4c"); 
+	  } else {
+		nameText = document.getElementById('tj14-3a');
+		target = document.getElementById('tj14-3ad');
+		doc2= document.getElementById("tj14-3"); 
+		doc0= document.getElementById("tj14-3b");  
+		doc1= document.getElementById("tj14-3c"); 
+	  }
 		}
 	}
         break ;
@@ -1431,9 +1488,6 @@ default:
 	nameText = 0;
         break ;
 }
-
-
-
 
 
 
@@ -1498,9 +1552,19 @@ switch (cars) {
 
 
 
+
 }
 
 }
+        if ( sessionStorage.getItem("wako") != '' && wakoshi == '' ){
+	nameText = document.getElementById('tj11-Ma');
+	target = document.getElementById('tj11-Mad');
+	doc0= document.getElementById("tj11-Mb");  
+	doc1= document.getElementById("tj11-Mc"); 
+	doc0.innerHTML= sessionStorage.getItem("wako");
+	doc0.style.backgroundColor = '#ffffff'; //背景
+	}
+	sessionStorage.setItem("wako", wakoshi);
 
 function sleepSetInterval(ms, callback, count) {
   let i = 0;
@@ -1513,8 +1577,15 @@ function sleepSetInterval(ms, callback, count) {
   }, ms);
 }
 
+var YY = sessionStorage.getItem('Y0');
+window.scrollTo(0, YY );
 
 
+
+sleepSetInterval(2000, () =>{
+      sessionStorage.setItem('Y0',window.pageYOffset) ;
+}
+, 7)
     }
   }
 };
