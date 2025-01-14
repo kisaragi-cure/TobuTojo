@@ -31,18 +31,6 @@ background-color: #ffffff;
     width: 155px;
 }
 
-.sotetsubutton{
-    width: 150px;
-    height: 2em;
-    padding: 7px;
-    font-size: 18pt;
-}
-.dentobutton{
-    width: 200px;
-    height: 2em;
-    padding: 7px;
-    font-size: 18pt;
-}
 
 </style>
 
@@ -52,7 +40,7 @@ background-color: #ffffff;
   <body>
 
 <nobr>
-<p> 東武東上線　[自動更新：15秒]　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　(C)Cure_kisaragi 2024 / Ver.1.00 01/10</p>
+<p> 東武東上線　[自動更新：15秒]　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　(C)Cure_kisaragi 2024 / Ver.1.05 01/15</p>
 <div style="position: absolute; top: 35px; left:10px; font-size:9pt"><p>本アプリケーションが利用する公共交通データは、公共交通オープンデータセンターにおいて提供されるものです。公共交通事業者により提供されたデータを元にしていますが、</p></div>
 <div style="position: absolute; top: 50px; left:10px; font-size:9pt"><p>必ずしも正確・完全なものとは限りません。本アプリケーションの表示内容について、公共交通事業者への直接の問合せは行わないでください。</p></div>
 
@@ -619,6 +607,16 @@ background-color: #ffffff;
 <div id="tj22-4" style="position: absolute; top: 5700px; left:385px; font-size:12pt; "></div>
 <div id="tj22-4c" style="position: absolute; top: 5755px; left:375px; font-size:12pt; color:#FF0000; "></div>
 
+<!川越市-霞ヶ関>
+<div id="tj22-23d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj22-23" disabled / name="address" size="14" value=""　></div>
+<div id="tj22-23b" style="position: absolute; top: 5880px; left:595px; font-size:12pt; "></div>
+<div id="tj22-23e" style="position: absolute; top: 5880px; left:605px; font-size:12pt; "></div>
+<div id="tj22-23c" style="position: absolute; top: 5935px; left:595px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj23-22d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj23-22" disabled / name="address" size="14" value=""　></div>
+<div id="tj23-22b" style="position: absolute; top: 5800px; left:375px; font-size:12pt; "></div>
+<div id="tj23-22e" style="position: absolute; top: 5800px; left:385px; font-size:12pt; "></div>
+<div id="tj23-22c" style="position: absolute; top: 5855px; left:375px; font-size:12pt; color:#FF0000; "></div>
+
 <div style="position: absolute; top: 6150px; left:1100px; font-size:18pt"><p>　</p></div>
 
 
@@ -784,7 +782,10 @@ case '["odpt.Station:TokyoMetro.Yurakucho.ShinKiba"]':
 	break;
 case '["odpt.Station:TokyoMetro.Yurakucho.Ikebukuro"]':
 	des = "袋";
-	break;	
+	break;
+case '["odpt.Station:TokyoMetro.Fukutoshin.Shibuya"]':
+	des = "渋";
+	break;
 case '["odpt.Station:Minatomirai.Minatomirai.MotomachiChukagai"]':
 	des = "元";
 	break;
@@ -799,6 +800,9 @@ case '["odpt.Station:Tokyu.Toyoko.Yokohama"]':
 	break;
 case '["odpt.Station:Sotetsu.Izumino.Shonandai"]':
 	des = "湘";
+	break;
+case '["odpt.Station:Sotetsu.SotetsuMain.Ebina"]':
+	des = "海";
 	break;
 case '0':
 	des = "―";
@@ -2031,6 +2035,22 @@ case ( '"odpt.Station:Tobu.Tojo.Kawagoeshi"' ):
 	  }
 		}
 	}
+        break ;
+
+	case ( '"odpt.Station:Tobu.Tojo.Kawagoe"' ):
+		nameText = document.getElementById('tj22-21');
+		target = document.getElementById('tj22-21d');
+		doc2= document.getElementById("tj22-21e"); 
+		doc0= document.getElementById("tj22-21b");  
+		doc1= document.getElementById("tj22-21c"); 
+        break ;
+
+	case ( '"odpt.Station:Tobu.Tojo.Kasumigaseki"' ):
+		nameText = document.getElementById('tj22-23');
+		target = document.getElementById('tj22-23d');
+		doc2= document.getElementById("tj22-23e"); 
+		doc0= document.getElementById("tj22-23b");  
+		doc1= document.getElementById("tj22-23c"); 
         break ;
 
 
