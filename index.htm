@@ -673,7 +673,7 @@ localStorage.setItem( 'bajon', 200 );
 ///////////////////////////////ここから東上線
 
 var request = new XMLHttpRequest();
-request.open("GET", "https://api-challenge2024.odpt.org/api/v4/odpt:Train?odpt:railway=odpt.Railway:Tobu.Tojo&acl:consumerKey=l839g98l6b5ua7gxknup87hv4o4jrj3ru61qzr9yw25dg5x8k4ucfuu6p9nqugci", true);
+request.open("GET", "https://api-challenge.odpt.org/api/v4/odpt:Train?odpt:operator=odpt.Operator:Tobu&acl:consumerKey=l839g98l6b5ua7gxknup87hv4o4jrj3ru61qzr9yw25dg5x8k4ucfuu6p9nqugci", true);
 request.responseType = "text";
 
 request.onload = () => {
