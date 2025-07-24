@@ -81,9 +81,9 @@ background-color: #ffffff;
 <div id="tj02-01e" style="position: absolute; top: 370px; left:465px; font-size:12pt; "></div>
 <div id="tj02-01c" style="position: absolute; top: 425px; left:455px; font-size:12pt; color:#FF0000; "></div>
 <div id="tj02p01d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj02p01" disabled / name="address" size="14" value=""　></div>
-<div id="tj02p01b" style="position: absolute; top: 360px; left:130px; font-size:12pt; "></div>
-<div id="tj02p-1e" style="position: absolute; top: 360px; left:140px; font-size:12pt; "></div>
-<div id="tj02p01c" style="position: absolute; top: 415px; left:130px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj02p01b" style="position: absolute; top: 370px; left:395px; font-size:12pt; "></div>
+<div id="tj02p-1e" style="position: absolute; top: 370px; left:405px; font-size:12pt; "></div>
+<div id="tj02p01c" style="position: absolute; top: 425px; left:395px; font-size:12pt; color:#FF0000; "></div>
 
 <div style="position: absolute; top: 490px; left:280px; font-size:18pt"><p>北池袋</p></div>
 <div id="tj02-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj02-1a" disabled / name="address" size="14" value=""　></div>
@@ -123,9 +123,9 @@ background-color: #ffffff;
 <div id="tj03-04e" style="position: absolute; top: 867px; left:525px; font-size:12pt; "></div>
 <div id="tj03-04c" style="position: absolute; top: 922px; left:515px; font-size:12pt; color:#FF0000; "></div>
 <div id="tj04-03d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj04-03" disabled / name="address" size="14" value=""　></div>
-<div id="tj04-03b" style="position: absolute; top: 867px; left:455px; font-size:12pt; "></div>
-<div id="tj04-03e" style="position: absolute; top: 867px; left:465px; font-size:12pt; "></div>
-<div id="tj04-03c" style="position: absolute; top: 922px; left:455px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj04-03b" style="position: absolute; top: 847px; left:455px; font-size:12pt; "></div>
+<div id="tj04-03e" style="position: absolute; top: 847px; left:465px; font-size:12pt; "></div>
+<div id="tj04-03c" style="position: absolute; top: 902px; left:455px; font-size:12pt; color:#FF0000; "></div>
 
 <div style="position: absolute; top: 1020px; left:280px; font-size:18pt"><p>大　山</p></div>
 <div id="tj04-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj04-1a" disabled / name="address" size="14" value=""　></div>
@@ -1027,10 +1027,18 @@ case ( '"odpt.Station:Tobu.Tojo.KitaIkebukuro"' ):
 
 	case ( '"odpt.Station:Tobu.Tojo.Ikebukuro"' ):
 		nameText = document.getElementById('tj02-01');
+if ( nameText.value == "" ){
 		target = document.getElementById('tj02-01d');
 		doc2= document.getElementById("tj02-01e"); 
 		doc0= document.getElementById("tj02-01b");  
 		doc1= document.getElementById("tj02-01c");  
+} else {
+		nameText = document.getElementById('tj02p-01');
+		target = document.getElementById('tj02p-01d');
+		doc2= document.getElementById("tj02p-01e"); 
+		doc0= document.getElementById("tj02p-01b");  
+		doc1= document.getElementById("tj02p-01c"); 
+}
         break ;
 
 	case ( '"odpt.Station:Tobu.Tojo.ShimoItabashi"' ):
